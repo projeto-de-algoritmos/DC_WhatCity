@@ -5,7 +5,17 @@ export default function Question(props) {
     return (
         <>
             <h1 className='question'>
-                What City
+                What City is the 
+                <input
+                    id='number'
+                    name='number'
+                    type='number'
+                    value={props.number}
+                    onChange={props.handleChangeNumber}
+                    className='numberInput'
+                >
+                </input>
+                with the smallest
                 <select
                     id='question'
                     name='question'

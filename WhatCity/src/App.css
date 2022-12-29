@@ -17,3 +17,20 @@
   font-size: 1.5em;
   font-weight: 500;
 }
+
+.getResultButton {
+  margin: 2rem 0;
+  font-size: 1.5em;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: #272727;
+  text-align: center;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.getResultButton:hover {
+  border: 1px solid #242424;
+  background-color: field;
+}
