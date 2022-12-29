@@ -29,7 +29,15 @@ function medianOfMedians(S, key) {
 
   const mediaMArray = [];
   for (const group of groups) {
-    group.sort((a, b) => sortCity(a, b, key));
+    group.sort((a, b) => {
+      if (a[key] > b[key]) {
+        return 1;
+      } else if (b[key] > a[key]) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
     const groupLength = group.length;
     mediaMArray.push(group[Math.ceil(groupLength/2)-1]);
   }
@@ -76,10 +84,10 @@ function kSmallest(S, k, key) {
     return m;
   }
   else if (left > k) {
-    return kSmallest(S.slice(0, left), k);
+    return kSmallest(S.slice(0, left), k, key);
   }
   else {
-    return kSmallest(S.slice(left + 1, S.length), k - left - 1);
+    return kSmallest(S.slice(left + 1, S.length), k - left - 1, key);
   }
 }
 
