@@ -1,14 +1,14 @@
-function sortCity(a, b) {
-  if (a.population > b.population) {
+function sortCity(a, b, key) {
+  if (a[key] > b[key]) {
     return 1;
-  } else if (b.population > a.population) {
+  } else if (b[key] > a[key]) {
     return -1;
   } else {
     return 1;
   }
 }
 
-function medianOfMedians(S) {
+function medianOfMedians(S, key) {
   const size = S.length;
   const tam = 5;
   const groups = [];
@@ -29,7 +29,7 @@ function medianOfMedians(S) {
 
   const mediaMArray = [];
   for (const group of groups) {
-    group.sort(sortCity);
+    group.sort((a, b) => sortCity(a, b, key));
     const groupLength = group.length;
     mediaMArray.push(group[Math.ceil(groupLength/2)-1]);
   }
@@ -38,20 +38,19 @@ function medianOfMedians(S) {
   if (medianMlength <= 5) {
     return mediaMArray[Math.ceil(medianMlength/2)-1];
   }
-
-  medianOfMedians(mediaMArray);
+  return medianOfMedians(mediaMArray, key);
 }
 
-function partition(S, m) {
+function partition(S, m, key) {
   let left = 0;
   let rigth = S.length - 1;
   let i = 0;
 
   while (i <= rigth) {
-    if (S[i].population == m.population) {
+    if (S[i][key] == m[key]) {
       i++;
     }
-    else if (S[i].population < m.population) {
+    else if (S[i][key] < m[key]) {
       const aux = S[left];
       S[left] = S[i];
       S[i] = aux;
@@ -69,9 +68,9 @@ function partition(S, m) {
   return left;
 }
 
-function kSmallest(S, k) {
-  const m = medianOfMedians(S);
-  const left = partition(S, m);
+function kSmallest(S, k, key) {
+  const m = medianOfMedians(S, key);
+  const left = partition(S, m, key);
 
   if (left == k) {
     return m;
