@@ -13,6 +13,8 @@ export default function Question(props) {
                     value={props.number}
                     onChange={props.handleChangeNumber}
                     className='numberInput'
+                    min={1}
+                    max={props.max}
                 >
                 </input>
                 with the smallest

@@ -1,4 +1,4 @@
-function readFile() {
+async function readFile() {
   let header = []
   const data = []
   fetch('./worldcities.csv')
@@ -14,7 +14,10 @@ function readFile() {
           lineData.forEach((el, index) => {
             obj[header[index]] = el.slice(1, -1);
           })
-          data.push(obj);
+          if (!["", null, undefined, "0"].includes(obj.population) && !isNaN(obj.population)) {
+            obj.population = Number(obj.population);
+            data.push(obj);
+          }
         }
       })
     })
