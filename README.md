@@ -46,4 +46,4 @@ Após clonar o repositório executar no terminal os seguintes comandos para inst
     ```
 
 ## Apresentação
-https://github.com/projeto-de-algoritmos/DC_WhatCity/blob/dfb048f063347a332d077e677d98a9c2e0322733/WhatCity/src/assets/presentation.mp4
+https://github.com/projeto-de-algoritmos/DC_WhatCity/blob/1e5dadd4e030c6d88e44cd7c3ab75293076d770f/WhatCity/src/assets/presentation.mp4
