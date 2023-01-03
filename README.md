@@ -1,45 +1,36 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# WhatCity...?
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 6<br>
+**Conteúdo da Disciplina**: Dividir e Conquistar<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 19/0056843  |  Carlos de Sousa Fiuza |
+| 19/0055201  |  Matheus Calixto Vaz Pinheiro |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Este projeto tem como objetivo utilizar de um algoritmo de mediana das medianas para encontrar a menor cidade de acordo com o atributo escolhido pelo usuário.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: javascript<br>
+**Framework**: React<br>
+npm ou yarn
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+Pode ser acessado pelo link: [https://dc-what-city.vercel.app](https://dc-what-city.vercel.app)
 
 
+ou
 
 
+Após clonar o repositório executar no terminal os seguintes comandos para instalar as dependências e iniciar o projeto:
+
+    ```bash
+    cd WhatCity...
+    yarn
+    yarn dev
+    ```
