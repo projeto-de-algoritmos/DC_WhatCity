@@ -1,13 +1,3 @@
-function sortCity(a, b, key) {
-  if (a[key] > b[key]) {
-    return 1;
-  } else if (b[key] > a[key]) {
-    return -1;
-  } else {
-    return 1;
-  }
-}
-
 function medianOfMedians(S, key) {
   const size = S.length;
   const tam = 5;
